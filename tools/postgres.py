@@ -47,6 +47,12 @@ def pkl_create():
         pickle.dump(dict, f)
     print("Pickle Created Successfully!")
 
+def pkl_read(file):
+    dict = pickle.load(open(file, 'rb'))
+    print("User: {}".format(dict['user']))
+    print("Host: {}".format(dict['host']))
+    print("PW: {}".format(dict['pw']))
+
 
 class database():
     def  __init__(self, db, host, user, pw):
